@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eden Magazine - Link Tree</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <div class="profile-image">
+                <img src="https://via.placeholder.com/120/4CAF50/white?text=EDEN" alt="Eden Magazine Logo" id="profileImg">
+            </div>
+            <h1 class="profile-name">Eden Magazine</h1>
+            <p class="profile-bio">Your source for lifestyle, wellness, and inspiration. Discover stories that matter.</p>
+            
+            <!-- Social Media Icons -->
+            <div class="social-links">
+                <a href="#" class="social-link" data-platform="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link" data-platform="facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="social-link" data-platform="twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link" data-platform="youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="social-link" data-platform="linkedin">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Links Section -->
+        <div class="links-container">
+            <div class="link-item" data-category="magazine">
+                <i class="fas fa-book-open"></i>
+                <div class="link-content">
+                    <span class="link-title">Latest Issue</span>
+                    <span class="link-description">Read our newest magazine edition</span>
+                </div>
+                <i class="fas fa-external-link-alt"></i>
+            </div>
+
+            <div class="link-item" data-category="shop">
+                <i class="fas fa-shopping-bag"></i>
+                <div class="link-content">
+                    <span class="link-title">Shop Merchandise</span>
+                    <span class="link-description">Exclusive Eden Magazine products</span>
+                </div>
+                <i class="fas fa-external-link-alt"></i>
+            </div>
+
+            <div class="link-item" data-category="subscription">
+                <i class="fas fa-star"></i>
+                <div class="link-content">
+                    <span class="link-title">Subscribe</span>
+                    <span class="link-description">Get premium access to all content</span>
+                </div>
+                <i class="fas fa-external-link-alt"></i>
+            </div>
+
+            <div class="link-item" data-category="archive">
+                <i class="fas fa-archive"></i>
+                <div class="link-content">
+                    <span class="link-title">Magazine Archive</span>
+                    <span class="link-description">Browse past issues and articles</span>
+                </div>
+                <i class="fas fa-external-link-alt"></i>
+            </div>
+
+            <div class="link-item" data-category="blog">
+                <i class="fas fa-edit"></i>
+                <div class="link-content">
+                    <span class="link-title">Blog</span>
+                    <span class="link-description">Daily articles and insights</span>
+                </div>
+                <i class="fas fa-external-link-alt"></i>
+            </div>
+
+            <div class="link-item" data-category="newsletter">
+                <i class="fas fa-envelope"></i>
+                <div class="link-content">
+                    <span class="link-title">Newsletter</span>
+                    <span class="link-description">Weekly updates delivered to your inbox</span>
+                </div>
+                <i class="fas fa-external-link-alt"></i>
+            </div>
+
+            <div class="link-item" data-category="events">
+                <i class="fas fa-calendar-alt"></i>
+                <div class="link-content">
+                    <span class="link-title">Upcoming Events</span>
+                    <span class="link-description">Join our workshops and meetups</span>
+                </div>
+                <i class="fas fa-external-link-alt"></i>
+            </div>
+
+            <div class="link-item" data-category="contact">
+                <i class="fas fa-phone"></i>
+                <div class="link-content">
+                    <span class="link-title">Contact Us</span>
+                    <span class="link-description">Get in touch with our team</span>
+                </div>
+                <i class="fas fa-external-link-alt"></i>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2025 Eden Magazine. All rights reserved.</p>
+            <div class="theme-toggle">
+                <button id="themeToggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel Button (Hidden by default) -->
+    <button id="adminToggle" class="admin-toggle">
+        <i class="fas fa-cog"></i>
+    </button>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="admin-panel">
+        <div class="admin-content">
+            <h3>Admin Panel</h3>
+            <button id="closeAdmin" class="close-btn">&times;</button>
+            
+            <div class="admin-section">
+                <h4>Profile Settings</h4>
+                <input type="text" id="profileName" placeholder="Magazine Name">
+                <textarea id="profileBio" placeholder="Bio description"></textarea>
+                <input type="url" id="profileImage" placeholder="Profile image URL">
+            </div>
+
+            <div class="admin-section">
+                <h4>Add New Link</h4>
+                <input type="text" id="linkTitle" placeholder="Link title">
+                <input type="text" id="linkDescription" placeholder="Link description">
+                <input type="url" id="linkURL" placeholder="Link URL">
+                <select id="linkIcon">
+                    <option value="fas fa-link">Default</option>
+                    <option value="fas fa-book-open">Magazine</option>
+                    <option value="fas fa-shopping-bag">Shop</option>
+                    <option value="fas fa-star">Premium</option>
+                    <option value="fas fa-envelope">Newsletter</option>
+                    <option value="fas fa-calendar-alt">Events</option>
+                    <option value="fas fa-phone">Contact</option>
+                </select>
+                <button id="addLink">Add Link</button>
+            </div>
+
+            <div class="admin-section">
+                <h4>Social Media Links</h4>
+                <input type="url" id="instagramLink" placeholder="Instagram URL">
+                <input type="url" id="facebookLink" placeholder="Facebook URL">
+                <input type="url" id="twitterLink" placeholder="Twitter URL">
+                <input type="url" id="youtubeLink" placeholder="YouTube URL">
+                <input type="url" id="linkedinLink" placeholder="LinkedIn URL">
+                <button id="updateSocials">Update Social Links</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
