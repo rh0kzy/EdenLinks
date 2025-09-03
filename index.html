@@ -1,112 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eden Magazine - Link Tree</title>
+    <title>EDEN PARFUM - Liens Officiels</title>
+    <meta name="description" content="Eden Parfum - Extraits de parfums rares et bakharat authentique. L'élégance olfactive entre tradition orientale et raffinement moderne.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Background Animation -->
+    <div class="background-animation"></div>
+    
     <div class="container">
-        <!-- Profile Section -->
-        <div class="profile">
+        <!-- Header Section -->
+        <header class="profile">
             <div class="profile-image">
-                <img src="https://via.placeholder.com/120/4CAF50/white?text=EDEN" alt="Eden Magazine Logo" id="profileImg">
+                <img src="20250807_131454000_iOS.png" alt="EDEN PARFUM Logo" id="profileImg">
+                <div class="image-glow"></div>
             </div>
-            <h1 class="profile-name">Eden Magazine</h1>
-            <p class="profile-bio">Your source for lifestyle, wellness, and inspiration. Discover stories that matter.</p>
             
-            <!-- Social Media Icons -->
-            <div class="social-links">
-                <a href="#" class="social-link" data-platform="instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="social-link" data-platform="facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="#" class="social-link" data-platform="twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-link" data-platform="youtube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="#" class="social-link" data-platform="linkedin">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+            <div class="profile-info">
+                <h1 class="profile-name">EDEN PARFUM</h1>
+                <p class="profile-bio">Extraits de parfums rares et bakharat authentique.<br>
+                   <span class="bio-highlight">L'élégance olfactive entre tradition orientale et raffinement moderne.</span>
+                </p>
+                
+                <!-- Social Media Links -->
+                <div class="social-links">
+                    <a href="https://www.instagram.com/eden._.parfum" class="social-link instagram" data-platform="instagram" target="_blank" rel="noopener">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@eden.parfum58" class="social-link tiktok" data-platform="tiktok" target="_blank" rel="noopener">
+                        <i class="fab fa-tiktok"></i>
+                        <span>TikTok</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Links Section -->
+        <main class="links-section">
+            <div class="section-title">
+                <h2><i class="fas fa-star"></i> Nos Services</h2>
+            </div>
+            
+            <div class="links-container">
+                <!-- Website Link -->
+                <article class="link-item featured" data-category="website" onclick="window.open('https://edenparfum.netlify.app/', '_blank')">
+                    <div class="link-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="link-content">
+                        <h3 class="link-title">Notre Site Web</h3>
+                        <p class="link-description">Découvrez notre collection complète de parfums</p>
+                        <span class="link-badge">Boutique en ligne</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </article>
+
+                <!-- Location Link -->
+                <article class="link-item" data-category="location" onclick="openMapModal()">
+                    <div class="link-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="link-content">
+                        <h3 class="link-title">Nous Trouver</h3>
+                        <p class="link-description">Visitez notre boutique physique</p>
+                        <span class="link-badge">Localisation</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-map"></i>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Map Modal -->
+        <div id="mapModal" class="map-modal" aria-hidden="true">
+            <div class="map-modal-content">
+                <header class="map-header">
+                    <h3><i class="fas fa-map-marker-alt"></i> EDEN PARFUM - Notre Localisation</h3>
+                    <button class="close-modal" onclick="closeMapModal()" aria-label="Fermer la carte">&times;</button>
+                </header>
+                
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.5234567!2d-4.7654321!3d34.0123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDAwJzQ0LjQiTiA0wrA0NSc1NS42Ilc!5e0!3m2!1sfr!2sma!4v1234567890123!5m2!1sfr!2sma"
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Localisation EDEN PARFUM">
+                    </iframe>
+                </div>
+                
+                <div class="map-actions">
+                    <a href="https://maps.app.goo.gl/jvUTDNhXJmUkngid9" target="_blank" class="map-button primary" rel="noopener">
+                        <i class="fas fa-external-link-alt"></i> 
+                        <span>Ouvrir dans Google Maps</span>
+                    </a>
+                    <button onclick="getDirections()" class="map-button secondary">
+                        <i class="fas fa-route"></i> 
+                        <span>Obtenir les directions</span>
+                    </button>
+                </div>
             </div>
         </div>
 
-        <!-- Links Section -->
-        <div class="links-container">
-            <div class="link-item" data-category="magazine">
-                <i class="fas fa-book-open"></i>
-                <div class="link-content">
-                    <span class="link-title">Latest Issue</span>
-                    <span class="link-description">Read our newest magazine edition</span>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 EDEN PARFUM. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Mentions légales</a>
+                    <a href="#" class="footer-link">Politique de confidentialité</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+                    <span class="link-title">Nous Trouver</span>
+                    <span class="link-description">Visitez notre boutique</span>
                 </div>
                 <i class="fas fa-external-link-alt"></i>
             </div>
-
-            <div class="link-item" data-category="shop">
-                <i class="fas fa-shopping-bag"></i>
-                <div class="link-content">
-                    <span class="link-title">Shop Merchandise</span>
-                    <span class="link-description">Exclusive Eden Magazine products</span>
-                </div>
-                <i class="fas fa-external-link-alt"></i>
-            </div>
-
-            <div class="link-item" data-category="subscription">
-                <i class="fas fa-star"></i>
-                <div class="link-content">
-                    <span class="link-title">Subscribe</span>
-                    <span class="link-description">Get premium access to all content</span>
-                </div>
-                <i class="fas fa-external-link-alt"></i>
-            </div>
-
-            <div class="link-item" data-category="archive">
-                <i class="fas fa-archive"></i>
-                <div class="link-content">
-                    <span class="link-title">Magazine Archive</span>
-                    <span class="link-description">Browse past issues and articles</span>
-                </div>
-                <i class="fas fa-external-link-alt"></i>
-            </div>
-
-            <div class="link-item" data-category="blog">
-                <i class="fas fa-edit"></i>
-                <div class="link-content">
-                    <span class="link-title">Blog</span>
-                    <span class="link-description">Daily articles and insights</span>
-                </div>
-                <i class="fas fa-external-link-alt"></i>
-            </div>
-
-            <div class="link-item" data-category="newsletter">
-                <i class="fas fa-envelope"></i>
-                <div class="link-content">
-                    <span class="link-title">Newsletter</span>
-                    <span class="link-description">Weekly updates delivered to your inbox</span>
-                </div>
-                <i class="fas fa-external-link-alt"></i>
-            </div>
-
-            <div class="link-item" data-category="events">
-                <i class="fas fa-calendar-alt"></i>
-                <div class="link-content">
-                    <span class="link-title">Upcoming Events</span>
-                    <span class="link-description">Join our workshops and meetups</span>
-                </div>
-                <i class="fas fa-external-link-alt"></i>
-            </div>
-
-            <div class="link-item" data-category="contact">
-                <i class="fas fa-phone"></i>
-                <div class="link-content">
-                    <span class="link-title">Contact Us</span>
-                    <span class="link-description">Get in touch with our team</span>
                 </div>
                 <i class="fas fa-external-link-alt"></i>
             </div>
@@ -114,59 +143,7 @@
 
         <!-- Footer -->
         <div class="footer">
-            <p>&copy; 2025 Eden Magazine. All rights reserved.</p>
-            <div class="theme-toggle">
-                <button id="themeToggle" class="theme-btn">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Admin Panel Button (Hidden by default) -->
-    <button id="adminToggle" class="admin-toggle">
-        <i class="fas fa-cog"></i>
-    </button>
-
-    <!-- Admin Panel -->
-    <div id="adminPanel" class="admin-panel">
-        <div class="admin-content">
-            <h3>Admin Panel</h3>
-            <button id="closeAdmin" class="close-btn">&times;</button>
-            
-            <div class="admin-section">
-                <h4>Profile Settings</h4>
-                <input type="text" id="profileName" placeholder="Magazine Name">
-                <textarea id="profileBio" placeholder="Bio description"></textarea>
-                <input type="url" id="profileImage" placeholder="Profile image URL">
-            </div>
-
-            <div class="admin-section">
-                <h4>Add New Link</h4>
-                <input type="text" id="linkTitle" placeholder="Link title">
-                <input type="text" id="linkDescription" placeholder="Link description">
-                <input type="url" id="linkURL" placeholder="Link URL">
-                <select id="linkIcon">
-                    <option value="fas fa-link">Default</option>
-                    <option value="fas fa-book-open">Magazine</option>
-                    <option value="fas fa-shopping-bag">Shop</option>
-                    <option value="fas fa-star">Premium</option>
-                    <option value="fas fa-envelope">Newsletter</option>
-                    <option value="fas fa-calendar-alt">Events</option>
-                    <option value="fas fa-phone">Contact</option>
-                </select>
-                <button id="addLink">Add Link</button>
-            </div>
-
-            <div class="admin-section">
-                <h4>Social Media Links</h4>
-                <input type="url" id="instagramLink" placeholder="Instagram URL">
-                <input type="url" id="facebookLink" placeholder="Facebook URL">
-                <input type="url" id="twitterLink" placeholder="Twitter URL">
-                <input type="url" id="youtubeLink" placeholder="YouTube URL">
-                <input type="url" id="linkedinLink" placeholder="LinkedIn URL">
-                <button id="updateSocials">Update Social Links</button>
-            </div>
+            <p>&copy; 2025 EDEN PARFUM. Tous droits réservés.</p>
         </div>
     </div>
 
