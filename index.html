@@ -66,55 +66,61 @@
                 </article>
 
                 <!-- Location Link -->
-                <article class="link-item" data-category="location" onclick="openMapModal()">
+                <article class="link-item" data-category="location" onclick="window.open('https://maps.app.goo.gl/jvUTDNhXJmUkngid9', '_blank')">
                     <div class="link-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <div class="link-content">
                         <h3 class="link-title">Nous Trouver</h3>
-                        <p class="link-description">Visitez notre boutique physique</p>
-                        <span class="link-badge">Localisation</span>
+                        <p class="link-description">Ouvrir dans Google Maps</p>
+                        <span class="link-badge">Navigation</span>
                     </div>
                     <div class="link-arrow">
-                        <i class="fas fa-map"></i>
+                        <i class="fas fa-external-link-alt"></i>
                     </div>
                 </article>
             </div>
         </main>
 
-        <!-- Map Modal -->
-        <div id="mapModal" class="map-modal" aria-hidden="true">
-            <div class="map-modal-content">
-                <header class="map-header">
-                    <h3><i class="fas fa-map-marker-alt"></i> EDEN PARFUM - Notre Localisation</h3>
-                    <button class="close-modal" onclick="closeMapModal()" aria-label="Fermer la carte">&times;</button>
-                </header>
+        <!-- Location Section with Embedded Map -->
+        <section class="location-section">
+            <div class="section-title">
+                <h2><i class="fas fa-map-marker-alt"></i> Notre Localisation</h2>
+            </div>
+            
+            <div class="location-card">
+                <div class="location-info">
+                    <h3><i class="fas fa-store"></i> EDEN PARFUM</h3>
+                    <p class="location-address">
+                        <i class="fas fa-map-pin"></i>
+                        Q354+C5M, Pl. du 1er Mai, Sidi M'Hamed 16000, Algeria
+                    </p>
+                    <div class="location-actions">
+                        <a href="https://maps.app.goo.gl/jvUTDNhXJmUkngid9" target="_blank" class="location-btn primary" rel="noopener">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Ouvrir dans Google Maps</span>
+                        </a>
+                        <button onclick="getDirections()" class="location-btn secondary">
+                            <i class="fas fa-route"></i>
+                            <span>Obtenir les directions</span>
+                        </button>
+                    </div>
+                </div>
                 
-                <div class="map-container">
+                <div class="map-embed">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.5234567!2d-4.7654321!3d34.0123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDAwJzQ0LjQiTiA0wrA0NSc1NS42Ilc!5e0!3m2!1sfr!2sma!4v1234567890123!5m2!1sfr!2sma"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.441861107745!2d3.0435912751816785!3d36.753542872230845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fac330b37b567%3A0x7a1c7e8c8d2b4a5f!2sPlace%20du%201er%20Mai%2C%20Alger%2C%20Algeria!5e0!3m2!1sen!2sma!4v1693737600000!5m2!1sen!2sma"
                         width="100%" 
-                        height="400" 
+                        height="300" 
                         style="border:0;" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade"
-                        title="Localisation EDEN PARFUM">
+                        title="Localisation EDEN PARFUM - Place du 1er Mai, Sidi M'Hamed, Alger">
                     </iframe>
                 </div>
-                
-                <div class="map-actions">
-                    <a href="https://maps.app.goo.gl/jvUTDNhXJmUkngid9" target="_blank" class="map-button primary" rel="noopener">
-                        <i class="fas fa-external-link-alt"></i> 
-                        <span>Ouvrir dans Google Maps</span>
-                    </a>
-                    <button onclick="getDirections()" class="map-button secondary">
-                        <i class="fas fa-route"></i> 
-                        <span>Obtenir les directions</span>
-                    </button>
-                </div>
             </div>
-        </div>
+        </section>
 
         <!-- Footer -->
         <footer class="footer">

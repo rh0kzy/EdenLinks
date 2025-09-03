@@ -100,28 +100,72 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Fonction pour obtenir les directions vers EDEN PARFUM
+// Fonctions pour la modal de carte
+function openMapModal() {
+    const modal = document.getElementById('mapModal');
+    if (modal) {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        
+        setTimeout(() => {
+            const content = modal.querySelector('.map-modal-content');
+            if (content) {
+                content.style.animation = 'slideIn 0.4s ease forwards';
+            }
+        }, 10);
+    }
+}
+
+function closeMapModal() {
+    const modal = document.getElementById('mapModal');
+    if (modal) {
+        const content = modal.querySelector('.map-modal-content');
+        if (content) {
+            content.style.animation = 'slideOut 0.3s ease forwards';
+        }
+        
+        setTimeout(() => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
+}
+
 function getDirections() {
-    const destination = "Q354+C5M, Pl. du 1er Mai, Sidi M'Hamed 16000, Algeria";
-    
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
             function(position) {
                 const userLat = position.coords.latitude;
                 const userLng = position.coords.longitude;
-                const url = `https://www.google.com/maps/dir/${userLat},${userLng}/${encodeURIComponent(destination)}`;
+                const url = `https://www.google.com/maps/dir/${userLat},${userLng}/https://maps.app.goo.gl/jvUTDNhXJmUkngid9`;
                 window.open(url, '_blank');
             },
             function() {
-                // Si la géolocalisation échoue, ouvrir directement Google Maps
                 window.open('https://maps.app.goo.gl/jvUTDNhXJmUkngid9', '_blank');
             }
         );
     } else {
-        // Si la géolocalisation n'est pas supportée
         window.open('https://maps.app.goo.gl/jvUTDNhXJmUkngid9', '_blank');
     }
 }
+
+// Fermer la modal en cliquant à l'extérieur
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('mapModal');
+    if (event.target === modal) {
+        closeMapModal();
+    }
+});
+
+// Fermer la modal avec Escape
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const modal = document.getElementById('mapModal');
+        if (modal && modal.style.display === 'block') {
+            closeMapModal();
+        }
+    }
+});
 
 // Ajouter les animations CSS nécessaires
 const styleSheet = document.createElement('style');

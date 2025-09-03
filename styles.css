@@ -234,7 +234,7 @@ body {
    Main Links Section
    ============================================= */
 .links-section {
-    flex: 1;
+    margin-bottom: var(--spacing-lg);
 }
 
 .section-title {
@@ -357,7 +357,114 @@ body {
 }
 
 /* =============================================
-   Map Modal
+   Location Section
+   ============================================= */
+.location-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.location-card {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.location-info {
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.location-info h3 {
+    font-family: var(--font-primary);
+    font-size: 1.3rem;
+    color: var(--primary-gold);
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.location-address {
+    color: var(--medium-gray);
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+    line-height: 1.6;
+}
+
+.location-address i {
+    color: var(--primary-gold);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.location-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.location-btn {
+    flex: 1;
+    min-width: 150px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    font-family: var(--font-secondary);
+    text-decoration: none;
+}
+
+.location-btn.primary {
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+    color: var(--white);
+}
+
+.location-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+    background: linear-gradient(135deg, var(--secondary-gold), var(--primary-gold));
+}
+
+.location-btn.secondary {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: var(--white);
+}
+
+.location-btn.secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+    background: linear-gradient(135deg, #45a049, #4CAF50);
+}
+
+.map-embed {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.map-embed iframe {
+    border: none;
+    filter: sepia(8%) saturate(110%) hue-rotate(10deg);
+    transition: all 0.3s ease;
+}
+
+.map-embed:hover iframe {
+    filter: sepia(0%) saturate(100%) hue-rotate(0deg);
+}
+
+/* =============================================
+   Map Modal (Anciens styles - à supprimer)
    ============================================= */
 .map-modal {
     display: none;
@@ -590,31 +697,22 @@ body {
         font-size: 1.2rem;
     }
     
-    .map-modal-content {
-        margin: 10% auto;
-        width: 95%;
-        max-height: 85vh;
-    }
-    
-    .map-header {
+    /* Location responsive */
+    .location-info {
         padding: var(--spacing-md);
     }
     
-    .map-header h3 {
-        font-size: 1.1rem;
-    }
-    
-    .map-container {
-        height: 300px;
-    }
-    
-    .map-actions {
+    .location-actions {
         flex-direction: column;
-        padding: var(--spacing-md);
+        gap: var(--spacing-sm);
     }
     
-    .map-button {
+    .location-btn {
         min-width: auto;
+    }
+    
+    .map-embed {
+        height: 250px;
     }
     
     .footer-links {
@@ -642,13 +740,17 @@ body {
         height: 100px;
     }
     
-    .map-modal-content {
-        margin: 15% auto;
-        width: 98%;
+    /* Location mobile */
+    .location-info h3 {
+        font-size: 1.1rem;
     }
     
-    .map-container {
-        height: 250px;
+    .location-address {
+        font-size: 0.9rem;
+    }
+    
+    .map-embed {
+        height: 200px;
     }
 }
 
