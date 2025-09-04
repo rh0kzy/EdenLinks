@@ -53,22 +53,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Fonction pour obtenir les directions vers EDEN PARFUM
 function getDirections() {
-    const destination = "Q354+C5M, Pl. du 1er Mai, Sidi M'Hamed 16000, Algeria";
-    
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
             function(position) {
                 const userLat = position.coords.latitude;
                 const userLng = position.coords.longitude;
-                const url = `https://www.google.com/maps/dir/${userLat},${userLng}/${encodeURIComponent(destination)}`;
+                const url = `https://www.google.com/maps/dir/${userLat},${userLng}/36.7585922,3.0554277`;
                 window.open(url, '_blank');
             },
             function() {
-                window.open('https://maps.app.goo.gl/jvUTDNhXJmUkngid9', '_blank');
+                window.open('https://www.google.com/maps/place/Eden+parfum/@36.7585922,3.0554277,166m/data=!3m2!1e3!4b1!4m6!3m5!1s0x128fb30018c34e03:0x69b304bc5ec91959!8m2!3d36.7585922!4d3.0554277!16s%2Fg%2F11w2cyhqj_', '_blank');
             }
         );
     } else {
-        window.open('https://maps.app.goo.gl/jvUTDNhXJmUkngid9', '_blank');
+        window.open('https://www.google.com/maps/place/Eden+parfum/@36.7585922,3.0554277,166m/data=!3m2!1e3!4b1!4m6!3m5!1s0x128fb30018c34e03:0x69b304bc5ec91959!8m2!3d36.7585922!4d3.0554277!16s%2Fg%2F11w2cyhqj_', '_blank');
     }
 }
 
